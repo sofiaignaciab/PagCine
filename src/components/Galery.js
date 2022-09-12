@@ -27,26 +27,19 @@ const Galery = () => {
           <Col>
             <Card className="mb-3" style={{ color: "#001" }} border="secondary">
               <Card.Img variant="top" src="https://picsum.photos/260/160" />
-              <Card.Body>
-                <Card.Title style={{ fontSize: 30 }} > Card title </Card.Title>
-                <Card.Text style={{ fontSize: 18 }}>
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </Card.Text>
-
-                <Dropdown>
-                  <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
-                    Fechas
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu variant="dark">
-                    {Array.from({ length: 6 }).map((n) => (
-                    <Dropdown.Item href="#/"> { `Fecha` }  </Dropdown.Item>
-                    ))}
-                  </Dropdown.Menu>
-                </Dropdown>
-
-              </Card.Body>
+                <Card.Body>
+                    <Card.Title style={{ fontSize: 30, textAlign: "left" }} > Película </Card.Title>
+                    <Dropdown style={{ textAlign: "left", width: 90, paddingTop: 15 }} >
+                      <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+                        Fechas
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu variant="dark">
+                        {Array.from({ length: 6 }).map((n) => (
+                        <Dropdown.Item href="#/"> { `Fecha` }</Dropdown.Item>
+                        ))}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                </Card.Body>
             </Card>
           </Col>
         ))}
