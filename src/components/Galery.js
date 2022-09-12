@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Row, Col, Dropdown, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Card, Row, Col, Nav, NavDropdown, ListGroup, Button } from "react-bootstrap";
 
 const Galery = () => {
   return(
@@ -28,17 +28,23 @@ const Galery = () => {
             <Card className="mb-3" style={{ color: "#000" }} border="secondary">
               <Card.Img variant="top" src="https://picsum.photos/260/160" />
                 <Card.Body>
-                    <Card.Title style={{ fontSize: 30, textAlign: "left" }} > Película </Card.Title>
-                    <Dropdown style={{ textAlign: "left", width: 90, paddingTop: 15 }} >
-                      <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
-                        Fechas
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu variant="dark">
-                        {Array.from({ length: 6 }).map((n) => (
-                        <Dropdown.Item href="#/"> { `Fecha` }</Dropdown.Item>
-                        ))}
-                      </Dropdown.Menu>
-                    </Dropdown>
+                  <Card.Title style={{ fontSize: 30, textAlign: "center" }} > Película </Card.Title>
+                  <ListGroup>
+                    {Array.from({ length: 4 }).map((_, idx) => (
+                    <ListGroup.Item>
+                      <Row>
+                        <Col>
+                          <Button variant="primary" size="lg">
+                            DÍA MES
+                          </Button>
+                        </Col>
+                        <Col>
+                          LUGAR HORA
+                        </Col>
+                      </Row>
+                    </ListGroup.Item>
+                    ))}
+                  </ListGroup>
                 </Card.Body>
             </Card>
           </Col>
@@ -47,5 +53,5 @@ const Galery = () => {
     </Container>
   );
 }
-
+// mes dia - lugar, país - hora
 export default Galery;
