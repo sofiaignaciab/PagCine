@@ -37,7 +37,7 @@ const Register = () => {
               <Form.Control type="password" placeholder="Confirm Password" />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" href="./Galery">
               Register
             </Button>
           </Col>

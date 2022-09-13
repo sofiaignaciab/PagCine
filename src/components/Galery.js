@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Row, Col, Dropdown, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Card, Row, Col, Nav, NavDropdown, ListGroup, Button } from "react-bootstrap";
 
 const Galery = () => {
   return(
@@ -27,6 +27,7 @@ const Galery = () => {
           <Col>
             <Card className="mb-3" style={{ color: "#000" }} border="secondary">
               <Card.Img variant="top" src="https://picsum.photos/260/160" />
+<<<<<<< HEAD
               <Card.Body>
                 <Card.Title style={{ fontSize: 30 }} > Card title </Card.Title>
                 <Card.Text style={{ fontSize: 18 }}>
@@ -42,11 +43,27 @@ const Galery = () => {
                   <Dropdown.Menu variant="dark">
                     {Array.from({ length: 6 }).map((n) => (
                     <Dropdown.Item href="#/"> { `Fecha` }  </Dropdown.Item>
+=======
+                <Card.Body>
+                  <Card.Title style={{ fontSize: 30, textAlign: "center" }} > Película </Card.Title>
+                  <ListGroup>
+                    {Array.from({ length: 4 }).map((_, idx) => (
+                    <ListGroup.Item>
+                      <Row>
+                        <Col>
+                          <Button variant="primary" size="lg">
+                            DÍA MES
+                          </Button>
+                        </Col>
+                        <Col>
+                          LUGAR HORA
+                        </Col>
+                      </Row>
+                    </ListGroup.Item>
+>>>>>>> 0b396719ab610a717c6061907ecf694665d9071a
                     ))}
-                  </Dropdown.Menu>
-                </Dropdown>
-
-              </Card.Body>
+                  </ListGroup>
+                </Card.Body>
             </Card>
           </Col>
         ))}
@@ -54,7 +71,11 @@ const Galery = () => {
     </Container>
   );
 }
+<<<<<<< HEAD
 
 
 
+=======
+// mes dia - lugar, país - hora
+>>>>>>> 0b396719ab610a717c6061907ecf694665d9071a
 export default Galery;
