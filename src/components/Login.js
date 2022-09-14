@@ -1,14 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 
 const Login = () => {
-
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("./Galery");
-  }
-
   return(
     <div>
       <Form>
@@ -28,12 +21,7 @@ const Login = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button>
-      </Form>
-
-      <Button onClick={handleClick} type="button">
-          Test
-        </Button>
-
+      </Form> 
     </div>
   );
 }
