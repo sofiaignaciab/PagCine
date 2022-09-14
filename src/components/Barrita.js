@@ -12,7 +12,7 @@ const Barrita = () => {
     <>
       <Container fluid>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Navbar.Brand href="#">TICKETERA</Navbar.Brand>
+          <Navbar.Brand href="/home">TICKETERA</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,17 +20,16 @@ const Barrita = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="/home">Inicio</Nav.Link>
-              <Nav.Link href="#action2">Mas vendidos</Nav.Link>
+              <Nav.Link href="#">Mas vendidos</Nav.Link>
               <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Accion</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Terror</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Romance</NavDropdown.Item>
-                <NavDropdown.Item href="#action6">Drama</NavDropdown.Item>
+                <NavDropdown.Item href="#">Accion</NavDropdown.Item>
+                <NavDropdown.Item href="#">Terror</NavDropdown.Item>
+                <NavDropdown.Item href="#">Romance</NavDropdown.Item>
+                <NavDropdown.Item href="#">Drama</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Mi perfil" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="Login.js">Iniciar</NavDropdown.Item>
-                <NavDropdown.Item href="#action8">Registrarse</NavDropdown.Item>
+                <NavDropdown.Item href="/">Iniciar</NavDropdown.Item>
+                <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form className="d-flex">
