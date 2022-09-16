@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap";
 
 const Login = () => {
   return(
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "100vh" }} >
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

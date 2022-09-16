@@ -4,20 +4,22 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Galery from './components/Galery';
+import Home from './components/Home';
+import Seats from './components/Seats';
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
+      
         <BrowserRouter>
           <Routes>
             <Route path="/" element={ <Login /> } />
             <Route path="/register" element={ <Register /> } />
-            <Route  path="/home" element={ <Galery /> } />
+            <Route  path="/home" element={ <Home /> } />
+            <Route path="/seats" element={ <Seats /> } />
           </Routes>
         </BrowserRouter>
-      </header>
+      
     </div>
   );
 }

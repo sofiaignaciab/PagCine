@@ -1,14 +1,15 @@
 import React from "react";
-import Barrita from "./Barrita";
-import Movies from "./Movies";
 
-const Galery = () => {
+import Barrita from "./Barrita";
+import SelectSeat from "./SelectSeat";
+
+const Seats = () => {
   return (
     <>
       <Barrita />
-      <Movies />
+      <SelectSeat />
     </>
   );
 };
 
-export default Galery;
+export default Seats;

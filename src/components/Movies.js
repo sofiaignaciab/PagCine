@@ -11,7 +11,6 @@ const Movies = () => {
               <Card.Img variant="top" src="https://picsum.photos/260/160" />
               <Card.Body>
                 <Card.Title style={{ fontSize: 30, textAlign: "center" }}>
-                  {" "}
                   Película{" "}
                 </Card.Title>
                 <ListGroup>
@@ -19,7 +18,7 @@ const Movies = () => {
                     <ListGroup.Item>
                       <Row>
                         <Col>
-                          <Button variant="primary" size="lg">
+                          <Button variant="primary" size="lg" href="/seats">
                             DÍA MES
                           </Button>
                         </Col>
