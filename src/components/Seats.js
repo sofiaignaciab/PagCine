@@ -1,7 +1,7 @@
 import React from "react";
 
 import Barrita from "./Barrita";
-import SelectSeat from "./SelectSeat";
+import SelectSeat from "./SelectSeat.js";
 
 const Seats = () => {
   return (
@@ -11,5 +11,6 @@ const Seats = () => {
     </>
   );
 };
+
 
 export default Seats;

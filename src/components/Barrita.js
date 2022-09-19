@@ -38,7 +38,7 @@ const Barrita = () => {
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Buscar"
+              placeholder="Buscar" 
               className="me-2"
               aria-label="Search"
             />
