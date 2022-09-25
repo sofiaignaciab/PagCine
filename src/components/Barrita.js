@@ -10,11 +10,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Barrita = () => {
   return (
-    <Container fluid style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 20 }}>
-      <Navbar bg="dark" variant="dark" expand="lg"  style={{ paddingLeft: 15, paddingRight: 15 }}>
-        <Navbar.Brand href="/home">
-          TICKETERA
-        </Navbar.Brand>
+    <Container
+      fluid
+      style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 20 }}
+    >
+      <Navbar
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        style={{ paddingLeft: 15, paddingRight: 15 }}
+      >
+        <Navbar.Brand href="/home">TICKETERA</Navbar.Brand>
         <FontAwesomeIcon icon="fa-solid fa-ticket" />
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -38,7 +44,7 @@ const Barrita = () => {
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Nombre película" 
+              placeholder="Nombre película"
               className="me-2"
               aria-label="Search"
             />

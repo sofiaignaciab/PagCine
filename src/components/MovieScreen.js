@@ -7,7 +7,7 @@ const MovieScreen = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        paddingBottom: 20
+        paddingBottom: 20,
       }}
     >
       <div

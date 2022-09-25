@@ -40,7 +40,6 @@ const SeatMatrix = () => {
       <Button variant="primary" size="lg">
         Comprar asientos
       </Button>
-
     </div>
   );
 };

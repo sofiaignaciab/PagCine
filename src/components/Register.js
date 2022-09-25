@@ -3,10 +3,18 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Register = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "100vh" }} >
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
       <Container>
-        <Col className="d-flex justify-content-center" >
-          <Form className="w-50" >
+        <Col className="d-flex justify-content-center">
+          <Form className="w-50">
             <Row>
               <Col>
                 <Form.Group contrsolId="registerName">
@@ -39,11 +47,10 @@ const Register = () => {
                 <Form.Label> Confirm Password </Form.Label>
                 <Form.Control type="password" placeholder="Confirm Password" />
               </Form.Group>
-
             </Col>
-              <Button variant="primary" type="submit" href="/home"  >
-                Register
-              </Button>
+            <Button variant="primary" type="submit" href="/home">
+              Register
+            </Button>
           </Form>
         </Col>
       </Container>

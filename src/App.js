@@ -30,13 +30,14 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
           <Route
-            path="/asientos"
+            path="/select-seats"
             element={<MovieContext.Provider
               value={{ movies, changeState: EditMovies }}
             >
 							<SelectSeat />
             </MovieContext.Provider>}
           />
+          <Route path="/usr-seats" />
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,8 +2,16 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 
 const Login = () => {
-  return(
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: "100vh" }} >
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -17,13 +25,13 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
-        
-        <Button variant="primary" type="submit" href="/home" >
+
+        <Button variant="primary" type="submit" href="/home">
           Submit
         </Button>
-      </Form> 
+      </Form>
     </div>
   );
-}
+};
 
 export default Login;
