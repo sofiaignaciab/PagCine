@@ -1,65 +1,14 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
-
-
+import Barrita from "./Barrita";
+import SeatMatrix from "./SeatMatrix";
+import MovieScreen from "./MovieScreen";
 
 const SelectSeat = () => {
   return (
-    <Container style={{ paddingTop: 15, width: "500px" }}>
-        <Row>
-          <Col sm={8}>
-            <Card>
-              <Card.Img  src="https://picsum.photos/600/800" />
-            </Card>
-          </Col>
-          <Col>
-            <Row xs={1} md={5} >
-              {Array.from({ length: 50 }).map((_, idx) => (
-                <Col sm>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                    />
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Col>
-        </Row>
-      </Container>
+    <div>
+      <Barrita />
+      <SeatMatrix />
+    </div>
   );
-}
+};
 
 export default SelectSeat;
-
-    // <div>
-    //   <Container style={{ paddingTop: 15, width: "500px" }}>
-    //     <Row>
-    //       <Col sm={8}>
-    //         <Card>
-    //           <Card.Img  src="https://picsum.photos/600/800" />
-    //         </Card>
-    //       </Col>
-    //       <Col>
-    //         <Row xs={1} md={5} >
-    //           {Array.from({ length: 50 }).map((_, idx) => (
-    //             <Col sm>
-    //               <div class="form-check">
-    //                 <input
-    //                   class="form-check-input"
-    //                   type="checkbox"
-    //                   value=""
-    //                   id="flexCheckDefault"
-    //                 />
-    //               </div>
-    //             </Col>
-    //           ))}
-    //         </Row>
-    //       </Col>
-    //     </Row>
-    //   </Container>
-    // </div>
-
