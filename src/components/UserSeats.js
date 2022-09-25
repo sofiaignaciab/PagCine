@@ -1,7 +1,8 @@
 import React from "react";
+import Barrita from "./Barrita";
+import MovieScreen from "./MovieScreen";
 import Seat from "./Seat";
 import { Container, Row, Button } from "react-bootstrap";
-import MovieScreen from "./MovieScreen";
 
 const GenerateSeats = (seatNumbers) => {
   return (
@@ -13,10 +14,13 @@ const GenerateSeats = (seatNumbers) => {
   );
 };
 
-const SeatMatrix = () => {
+const UserSeats = () => {
   return (
     <div>
-      <h1> Película </h1>
+      <Barrita />
+
+      <h1> Asientos comprados: </h1>
+      <h3> Película </h3>
       <h3> Fecha - Hora </h3>
 
       <MovieScreen />
@@ -37,11 +41,8 @@ const SeatMatrix = () => {
           {GenerateSeats(Array.from({ length: 6 }, (_, i) => 30 + i))}
         </div>
       </Container>
-      <Button variant="primary" size="lg" href="/usr-seats">
-        Comprar asientos
-      </Button>
     </div>
   );
 };
 
-export default SeatMatrix;
+export default UserSeats;

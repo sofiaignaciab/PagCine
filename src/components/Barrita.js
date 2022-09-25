@@ -39,6 +39,7 @@ const Barrita = () => {
             <NavDropdown title="Mi perfil" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/">Iniciar</NavDropdown.Item>
               <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
+              <NavDropdown.Item href="/usr-seats">Mis asientos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">

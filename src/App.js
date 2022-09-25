@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import MovieContext from "./contexts/MovieContext";
 import SelectSeat from "./components/SelectSeat";
+import UserSeats from "./components/UserSeats";
 
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
 							<SelectSeat />
             </MovieContext.Provider>}
           />
-          <Route path="/usr-seats" />
+          <Route path="/usr-seats" element={ <UserSeats /> }/>
         </Routes>
       </BrowserRouter>
     </div>
