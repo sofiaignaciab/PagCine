@@ -2,7 +2,7 @@ import React from "react";
 import Barrita from "./Barrita";
 import MovieScreen from "./MovieScreen";
 import Seat from "./Seat";
-import { Container, Row, Button } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const GenerateSeats = (seatNumbers) => {
   return (
