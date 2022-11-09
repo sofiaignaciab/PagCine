@@ -22,7 +22,7 @@
   }
 }
 
-.main {
+.seats {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -36,7 +36,7 @@
 	color: #464159;
 }
 @media(max-width: 768px){
-	.main{
+	.seats{
 		background-color: transparent;
 	}
 }
