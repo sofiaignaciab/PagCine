@@ -15,7 +15,7 @@ const Movies = () => {
   return (
     <Container>
       <Row xs={1} md={4} className="g-4">
-        <Col>
+        <Col className="h-30">
         <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
         <Card.Img variant="top" img src={Hereditary} />
         <Card.Body>
@@ -46,7 +46,7 @@ const Movies = () => {
         </Col>
 
 
-        <Col>
+        <Col className="h-30">
         <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
         <Card.Img variant="top" img src={Midsommar} />
         <Card.Body>

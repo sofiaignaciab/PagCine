@@ -57,7 +57,7 @@ const Login2=()=> {
           </div>
 
           <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
-          <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text'/>
+          <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
           <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
           <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
 
