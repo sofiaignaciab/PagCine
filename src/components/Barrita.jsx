@@ -23,7 +23,7 @@ const Barrita = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/login2">Perfil</Nav.Link>
+            <Nav.Link href="/login">Perfil</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

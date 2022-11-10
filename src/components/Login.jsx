@@ -4,6 +4,18 @@ from 'mdb-react-ui-kit';
 
 const Login2=()=> {
 
+  const [formValue, setFormValue] = useState({
+    name: '',
+    lastName: '',
+    email: '',
+    password: '',
+  });
+
+  const onChange = (e) => {
+    console.log(e);
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+  };
+
   const [justifyActive, setJustifyActive] = useState('tab1');;
 
   const handleJustifyClick = (value) => {
@@ -13,6 +25,26 @@ const Login2=()=> {
 
     setJustifyActive(value);
   };
+
+
+  const Registration = async(event) => {
+    event.preventDefault();
+
+    await fetch("http://localhost:27017/api/users/", {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(
+            {
+                name: formValue.name,
+                lastname: formValue.lastName,
+                email: formValue.email,
+                password: formValue.password
+            }
+        )
+    });
+}
 
   return (
     <MDBContainer className="p-3 d-flex flex-column w-50">
@@ -56,13 +88,10 @@ const Login2=()=> {
             <p><br></br></p>
           </div>
 
-          <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
-          <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
-          <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
-          <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
-
-
-          <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
+          <form>
+            <label>Nombre</label>
+            <input type={'text'} name={'nombre'} />
+          </form>
 
         </MDBTabsPane>
 

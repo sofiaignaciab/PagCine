@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import MovieContext from "./contexts/MovieContext";
 import SelectSeat from "./components/SelectSeat";
 import UserSeats from "./components/UserSeats";
+import Register from "./components/Register";
 
 
 const App = () => {
@@ -22,13 +23,9 @@ const App = () => {
         <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route
-            path="/select-seats"
-            element={<MovieContext.Provider
-              value={{ movies, changeState: EditMovies }}
-            >
-							<SelectSeat />
-            </MovieContext.Provider>}
+          <Route path="/register" element={<Register />} />
+          <Route path="/select-seats"
+            element={<MovieContext.Provider value={{ movies, changeState: EditMovies }}><SelectSeat /></MovieContext.Provider>}
           />
           <Route path="/usr-seats" element={ <UserSeats /> }/>
         </Routes>
