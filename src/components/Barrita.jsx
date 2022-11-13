@@ -1,4 +1,4 @@
-import {Nav,Navbar,Container,Form,Button} from "react-bootstrap";
+import {Nav,Navbar, NavDropdown,Container,Form,Button} from "react-bootstrap";
 
 // se puede agregar un boton de peliculas por estrenar
 //  y mas adelante un boton para comprar comida
@@ -23,7 +23,10 @@ const Barrita = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/login">Perfil</Nav.Link>
+            <NavDropdown title="Mi perfil" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
+              <NavDropdown.Item href="/login">Iniciar sesion</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Form className="d-flex">
             <Form.Control

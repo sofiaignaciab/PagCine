@@ -17,8 +17,6 @@ const Register = () => {
         }))
     }
 
-    console.log(userData);
-
     const Registration = async(event) => {
         event.preventDefault();
         await fetch('http://localhost:27017/api/users/', {
