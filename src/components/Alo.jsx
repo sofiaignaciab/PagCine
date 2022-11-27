@@ -1,7 +1,8 @@
 import React from "react";
-import {Row, Card, ListGroup, Button, ListGroupItem, Col, Container} from "react-bootstrap";
+import {Row, Card, ListGroup, Button, ListGroupItem, Container} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
-const Alo = ({title, img, overview, time, mainGenre}) => {
+const Alo = ({title, img, time, mainGenre}) => {
     return(
         <Container className={"w-25"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
@@ -16,7 +17,9 @@ const Alo = ({title, img, overview, time, mainGenre}) => {
                     </div>
                     <ListGroup.Item>
                         <Row>
-                            <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
+                            <Link to={`/seatReservation/${title}`}>
+                                <Button variant="primary" size="lg">Comprar</Button>
+                            </Link>
                         </Row>
                     </ListGroup.Item>
                     <ListGroup.Item>

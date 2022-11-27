@@ -1,21 +1,12 @@
-import React from "react";
-import Hereditary from "./Imagenes/Hereditary.jpeg";
-import HEUL from "./Imagenes/Heul.jpeg";
-import Elcamino from "./Imagenes/Elcamino.jpeg";
-import Forrest from "./Imagenes/Forrest.jpeg";
-import LVEB from "./Imagenes/LVEB.jpeg";
-import Siniestro from "./Imagenes/Siniestro.jpeg";
-import YADT from "./Imagenes/YADT.jpeg";
-import Midsommar from "./Imagenes/Midsommar.jpeg";
-import {Container,Row,Col,Card,ListGroup,Button, ListGroupItem} from "react-bootstrap";
-
-//<Card.Text style={{ fontSize: 18}}></Card.Text> para poner un resumen
+import React, {useContext} from "react";
+import {RoomContext} from "../contexts/RoomContext";
+import Alo from "./Alo";
 
 const Movies = () => {
   const {movies} = useContext(RoomContext);
   return (
       <div>
-            <div>
+            <div className={"w-100 d-inline-flex"}>
                 { movies.map(movie => <Alo key={movie.title} {...movie}/>) }
             </div>
       </div>
