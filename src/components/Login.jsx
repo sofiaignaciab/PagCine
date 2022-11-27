@@ -1,9 +1,11 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
+  const navegate = useNavigate();
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -23,8 +25,9 @@ const onSubmit = (data) => {
 
   fetch(`http://localhost:27017/api/users/login/${email+ "&" + password}`)
   .then(response => response.json())
-  .then(result => console.log(result) ) //Login
+  .then(result => console.log(result) )
   .catch(e => console.log(e))
+  navegate("/")
 }
 
   return(
@@ -43,7 +46,7 @@ const onSubmit = (data) => {
              <Form.Control type="password" placeholder="Password" name={'password'} onChange={setData}/>
         </Form.Group>
         
-        <Button variant="primary" type="submit" onClick={onSubmit}>Submit</Button>
+        <Button variant="primary" type="submit" onClick={onSubmit} href="/">Submit</Button>
       </Form>
     </div>
   );

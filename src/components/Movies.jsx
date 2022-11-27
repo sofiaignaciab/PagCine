@@ -12,8 +12,19 @@ import {Container,Row,Col,Card,ListGroup,Button, ListGroupItem} from "react-boot
 //<Card.Text style={{ fontSize: 18}}></Card.Text> para poner un resumen
 
 const Movies = () => {
+  const {movies} = useContext(RoomContext);
   return (
-    <Container>
+      <div>
+            <div>
+                { movies.map(movie => <Alo key={movie.title} {...movie}/>) }
+            </div>
+      </div>
+  );
+};
+
+export default Movies;
+
+    /*<Container>
       <Row xs={1} md={4} className="g-4">
         <Col className="h-30">
         <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
@@ -28,7 +39,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -59,7 +70,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -90,7 +101,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -120,7 +131,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -150,7 +161,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -180,7 +191,7 @@ const Movies = () => {
               </div>
               <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -210,7 +221,7 @@ const Movies = () => {
           </div>
         <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -240,7 +251,7 @@ const Movies = () => {
         </div>
         <ListGroup.Item>
            <Row>
-                <Button variant="primary" size="lg" href="/">Comprar</Button>
+                <Button variant="primary" size="lg" href="/select-seats">Comprar</Button>
            </Row>
         </ListGroup.Item>
         <ListGroup.Item>
@@ -258,39 +269,4 @@ const Movies = () => {
         </Col>
       </Row>
       
-    </Container>
-  );
-};
-
-export default Movies;
-
-/* <Container>
-      <Row xs={1} md={4} className="g-4" >
-        {Array.from({ length: 12 }).map((_, idx) => (
-          <Col>
-            <Card className="mb-3" style={{ color: "#000" }} border="secondary">
-              <Card.Img variant="top" src={`https://picsum.photos/180/255`} />
-              <Card.Body>
-                <Card.Title style={{ fontSize: 30, textAlign: "center" }}>
-                  Película{" "}
-                </Card.Title>
-                <ListGroup>
-                  {Array.from({ length: 2 }).map((_, idx) => (
-                    <ListGroup.Item>
-                      <Row>
-                        <Col>
-                          <Button variant="primary" size="sm" href="/select-seats">
-                            DÍA MES
-                          </Button>
-                        </Col>
-                        <Col>LUGAR HORA</Col>
-                      </Row>
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container> */
+    </Container>*/

@@ -36,7 +36,8 @@ const Seat = (props) => {
 
   return (
     <>
-      <div className="col-2 col-md-2">
+      <div className="col-2 col-sm-1">
+        {seatNumber}
         <div
           className={`seat seat-${seatNumber} ${seatStatus}`}
           onClick={(e) => seatClickHandler(e, props.seatno)}

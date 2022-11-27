@@ -5,33 +5,24 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Login from "./components/Login";
 import Home from "./components/Home";
-import MovieContext from "./contexts/MovieContext";
-import SelectSeat from "./components/SelectSeat";
-import UserSeats from "./components/UserSeats";
 import Register from "./components/Register";
+import { RoomProvider } from "./contexts/Runprovider";
 
 
 const App = () => {
-  const [movies, EditMovies] = useState({
-    moviePrice: 10,
-    totalSeats: 0,
-    seatNumbers: [],
-  });
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/select-seats"
-            element={<MovieContext.Provider value={{ movies, changeState: EditMovies }}><SelectSeat /></MovieContext.Provider>}
-          />
-          <Route path="/usr-seats" element={ <UserSeats /> }/>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <RoomProvider>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Routes>
+                </RoomProvider>
+            </BrowserRouter>
+        </div>
+    );
 };
 
 export default App;
