@@ -15,7 +15,7 @@ const Barrita = () => {
             expand="lg"
             style={{ paddingLeft: 15, paddingRight: 15 }}
         >
-          <Navbar.Brand href="/" fontSize='1000px'>CINEMA </Navbar.Brand>
+          <Navbar.Brand href="/" fontSize='1000px'>CINEMA 🎟️ </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

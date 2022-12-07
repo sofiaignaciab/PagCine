@@ -1,7 +1,7 @@
 import {useContext} from "react";
 import {RoomContext} from "../contexts/RoomContext";
 
-export const Sofi = (title) => {
+export const Fnction = (title) => {
     const {movies} = useContext(RoomContext)
     let movie;
     for (const mov in movies) {

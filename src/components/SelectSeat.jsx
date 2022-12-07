@@ -1,7 +1,7 @@
 import Barrita from "./Barrita";
 import {useState} from "react";
 import {Seat} from "./Seat";
-import {Sofi} from "./Sofi";
+import {Fnction} from "./Fnction";
 import {useParams} from "react-router-dom";
 import MovieScreen from "./MovieScreen";
 
@@ -12,7 +12,7 @@ export const SelectSeat = () => {
     const [selectedSeats, setSelectedSeats] = useState([])
 
     if (!ready) {
-        const aux = Sofi(title.movie)
+        const aux = Fnction(title.movie)
         console.log(aux)
         setRoomData(aux)
         setReady(true)
@@ -50,7 +50,7 @@ export const SelectSeat = () => {
                 </div>
                 <button onSubmit={seatLocking}>Reservar</button>
             </div>
-        :
-            <h1>Hola Guapa</h1>
+            :
+            <h1> </h1>
     );
 };
