@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
-import {RoomContext} from "../contexts/RoomContext";
-import Alo from "./Alo";
+import {RoomContext} from "../context";
+import Cards from "./Cards";
 
 const Movies = () => {
     const {movies} = useContext(RoomContext);
@@ -8,7 +8,7 @@ const Movies = () => {
         <div>
             <div className={"flex flex-wrap w-100 m-auto"}>
                 <div className={"d-inline-block"}>
-                    { movies.map(movie => <Alo key={movie.title} {...movie}/>) }
+                    { movies.map(movie => <Cards key={movie.title} {...movie}/>) }
                 </div>
             </div>
         </div>

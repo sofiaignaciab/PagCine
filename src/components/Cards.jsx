@@ -2,7 +2,7 @@ import React from "react";
 import {Row, Card, ListGroup, Button, ListGroupItem, Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-const Alo = ({title, img, time, mainGenre}) => {
+const Cards = ({title, img, time, mainGenre}) => {
     return(
         <Container style= {{display: "inline-flex"}} className={"w-25"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
@@ -38,4 +38,4 @@ const Alo = ({title, img, time, mainGenre}) => {
     );
 }
 
-export default Alo;
+export default Cards;

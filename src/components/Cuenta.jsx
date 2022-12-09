@@ -1,1 +1,0 @@
-//se debe mostrar el historial de asientos comprados

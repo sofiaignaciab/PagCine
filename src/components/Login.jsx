@@ -1,11 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Form, Button } from "react-bootstrap";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import {AuthContext} from "../context/AuthContext";
 
 const Login = () => {
 
-    const navegate = useNavigate();
+    const {login} = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    //nuevo____________________________________________________
+    const onLogin = (id, name, lastName, email) => {
+
+        login(id, name, lastName, email);
+
+        navigate('/', { replace: true });
+    }
+    //__________________________________________________________
+
     const [userData, setUserData] = useState({
         email: "",
         password: "",
@@ -23,11 +35,12 @@ const Login = () => {
         const email  = userData.email
         const password = userData.password
 
-        fetch(`http://localhost:27017/api/users/login/${email+ "&" + password}`)
-            .then(response => response.json())
-            .then(result => console.log(result) )
-            .catch(e => console.log(e))
-        navegate("/")
+        const response = await new Promise(resolve => {
+            fetch(`http://localhost:27017/api/users/login/${email+ "&" + password}`)
+                .then(response => resolve(response.json()))
+        })
+
+        onLogin(response[0]._id, response[0].name, response[0].lastname, response[0].email)
     }
 
     return(

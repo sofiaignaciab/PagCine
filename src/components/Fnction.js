@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {RoomContext} from "../contexts/RoomContext";
+import {RoomContext} from "../context/RoomContext";
 
 export const Fnction = (title) => {
     const {movies} = useContext(RoomContext)

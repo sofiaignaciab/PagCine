@@ -1,8 +1,5 @@
 import {Nav,Navbar, NavDropdown,Container,Form,Button} from "react-bootstrap";
 
-// se puede agregar un boton de peliculas por estrenar
-//  y mas adelante un boton para comprar comida
-
 const Barrita = () => {
   return (
       <Container
