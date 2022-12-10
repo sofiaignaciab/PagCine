@@ -5,7 +5,7 @@ import AppRouter from "./router/AppRouter";
 
 const App = () => {
     return (
-        <div className="App">
+        <div className="">
             <AppRouter/>
         </div>
     )
