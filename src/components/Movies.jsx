@@ -2,6 +2,8 @@ import React, {useContext} from "react";
 import {RoomContext} from "../context";
 import Cards from "./Cards";
 
+//items-stretch
+
 const Movies = () => {
     const {movies} = useContext(RoomContext);
     return (
