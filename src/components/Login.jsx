@@ -30,7 +30,7 @@ const Login = () => {
             [fieldName]: e.target.value,
         }))
     }
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         data.preventDefault();
         const email  = userData.email
         const password = userData.password

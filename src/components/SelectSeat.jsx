@@ -29,12 +29,11 @@ export const SelectSeat = () => {
     }
 
     const seatLocking = () => {
-        const Aux = roomData.Seats
-        for (const ola in roomData.Seats) {
-            if (selectedSeats.includes(roomData.Seats[ola].id)) {
-                roomData.Seats[ola].inUse = true;
+        roomData.Seats.forEach((seat) => {
+            if (selectedSeats.includes(seat.id)) {
+                seat.inUse = true;
             }
-        }
+        })
         console.log(roomData.Seats)
     }
 
@@ -48,7 +47,7 @@ export const SelectSeat = () => {
                         {roomData.Seats.map(seat => <Seat key={seat.id} {...seat} seatSelection={seatSelection}/>)}
                     </div>
                 </div>
-                <button onSubmit={seatLocking}>Reservar</button>
+                <button onClick={seatLocking}>Reservar</button>
             </div>
             :
             <h1> </h1>

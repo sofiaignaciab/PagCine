@@ -30,6 +30,7 @@ const Register = () => {
                     lastname: userData.lastname,
                     email: userData.email,
                     password: userData.password,
+                    reservedseats: []
                 }
             )
         });
