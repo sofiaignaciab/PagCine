@@ -6,7 +6,7 @@ const Cards = ({title, img, time, mainGenre}) => {
     return(
         <div className={"flex inline-flex w-[20vw]"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
-                <Card.Img variant="top" img src={img} />
+                <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <div className={'m-[2px] text-black font-semibold text-3xl mb-2'}>{title}</div>
                     <Card.Subtitle className="mb-2 text-muted">{mainGenre + " - " + time}</Card.Subtitle>

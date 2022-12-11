@@ -13,9 +13,9 @@ const MovieScreen = () => {
       <div
         style={{
           paddingBottom: "15px",
-          height: "300px",
+          height: "200px",
           background: "white",
-          width: "400px",
+          width: "450px",
           transform: "rotateX(-30deg) scale(1.1)",
           perspective: "400px",
           boxShadow: "0 3px 10px 2px",

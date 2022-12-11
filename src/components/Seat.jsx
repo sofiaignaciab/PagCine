@@ -10,12 +10,13 @@ export const Seat = ({id, inUse, seatSelection}) => {
     }
 
     return (
-        <div
-            className={`${selected ? "bg-primary" : "bg-secondary" } ${inUse ? "bg-danger" : null} text-white`}
-            style={{margin: '10px', width: '45px', height: '45px', borderRadius: '5px', display: "inline-flex"}}
-            onClick={onClick}
-        >
-            {id}
+        <div className={'m-1 inline-flex'}>
+            <div
+                className={`flex flex-col justify-center w-[40px] h-[40px] m-auto rounded-lg inline-flex ${selected ? "bg-primary" : "bg-secondary" } ${inUse ? "bg-danger" : null} text-white text-xl hover:cursor-pointer`}
+                onClick={onClick}
+            >
+                {id}
+            </div>
         </div>
     )
 }

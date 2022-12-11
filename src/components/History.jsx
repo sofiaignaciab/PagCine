@@ -1,10 +1,10 @@
 import React from "react";
 
-const History = ({title, date, seats}) => {
+const History = ({Movie, date, seats}) => {
     return(
         <div className={"flex flex-nowrap justify-around mb-2"}>
             <div className={"text-base text-black font-light"}><h1 className={"text-lg text-black font-light"}>Pelicula</h1>
-            <div>{title}</div>
+            <div>{Movie}</div>
             </div>
 
             <div className={"text-base text-black font-light"}><h1 className={"text-lg text-black font-light"}>Fecha/hora</h1>
