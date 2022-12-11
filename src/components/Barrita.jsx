@@ -1,8 +1,29 @@
-import {Nav,Navbar, NavDropdown,Container,Form,Button} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import {AuthContext} from "../context/AuthContext";
+import {useContext} from "react";
 
 const Barrita = () => {
+  const {logged, user} = useContext(AuthContext);
   return (
-      <Container
+      <div className={'navbar flex justify-between px-1 mb-4 bg-[#374151]'}>
+        <div>
+          <Link className={'px-[15px] text-white no-underline'} to={"/"}>CINEMA 🎟️</Link>
+        </div>
+        <div className={'flex justify-center mr-2 text-g'}>
+          <div className={'flex flex-col justify-center'}>
+            {logged && <Link className={'px-[15px] text-white no-underline'} to={'/profile'}>{user.name}</Link> }
+            {!logged && <Link className={'px-[15px] text-white no-underline'} to={'/login'}>Iniciar sesion</Link> }
+          </div>
+          <div className={'flex flex-col justify-center'}>
+            <input placeholder={' Buscar...'} className={'w-[20vw] h-8 bg-white border-gray-700 rounded-lg text-black text-lg' } type={'text'}/>
+          </div>
+        </div>
+      </div>
+  );
+};
+
+/*
+* <Container
           fluid
           style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 20 }}
       >
@@ -12,19 +33,14 @@ const Barrita = () => {
             expand="lg"
             style={{ paddingLeft: 15, paddingRight: 15 }}
         >
-          <Navbar.Brand href="/" fontSize='1000px'>CINEMA 🎟️ </Navbar.Brand>
+          <Link to={"/"}>CINEMA 🎟️ </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav
-                className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: "100px" }}
-                navbarScroll
-            >
-              <NavDropdown title="Mi perfil" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/register">Registrarse</NavDropdown.Item>
-                <NavDropdown.Item href="/login">Iniciar sesion</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+            <div className="flex-none gap-2"></div>
+            <div>
+              {logged && <Link to={'/profile'} className={"mr-4 hover:text-white"}>{user.name}</Link> }
+              {!logged && <Link to={'/login'} className={"mr-4 hover:text-white"}>Iniciar sesion</Link> }
+            </div>
             <Form className="d-flex">
               <Form.Control
                   type="search"
@@ -36,8 +52,7 @@ const Barrita = () => {
             </Form>
           </Navbar.Collapse>
         </Navbar>
-      </Container>
-  );
-};
+      </Container>*/
+
 
 export default Barrita;

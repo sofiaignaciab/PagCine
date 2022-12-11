@@ -1,5 +1,6 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import {useState} from "react";
+import Barrita from "./Barrita"
 
 const Register = () => {
     const [userData, setUserData] = useState({
@@ -37,7 +38,8 @@ const Register = () => {
     }
 
     return (
-        <Container>
+        <div className={'w-full'}>
+            <Barrita/>
             <Col className="d-flex justify-content-center">
                 <Form className="w-50">
                     <Row>
@@ -72,7 +74,7 @@ const Register = () => {
                     </Col>
                 </Form>
             </Col>
-        </Container>
+        </div>
     )
 }
 

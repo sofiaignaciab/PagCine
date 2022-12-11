@@ -1,12 +1,12 @@
 import React from "react";
 
-import Nav_Bar from "./Nav_Bar";
+import Barrita from "./Barrita";
 import Profile_Card from "./Profile_Card";
 
 const Profile = () => {
     return(
         <>
-            <Nav_Bar />
+            <Barrita />
             <Profile_Card />
 
         </>

@@ -6,7 +6,9 @@ import {AuthContext} from "../context/AuthContext";
 
 const Profile_Card = () => {
 
-    //const{authState} = useContext(AuthContext)
+    const{user} = useContext(AuthContext)
+
+    console.log(user)
 
     return(
         <div className={'flex justify-center place-items-center'}>
@@ -18,8 +20,8 @@ const Profile_Card = () => {
                         className="rounded-full w-32 mb-4 mx-auto"
                         alt="Avatar"
                     />
-                    <h5 className="text-3xl font-light mb-2 text-black">Nombre Apellido</h5>
-                    <p className="text-gray-500 font-light text-xl">email</p>
+                    <h5 className="text-3xl font-light mb-2 text-black">{user.name}</h5>
+                    <p className="text-gray-500 font-light text-xl">{user.email}</p>
                 </div>
             </div>
         </div>

@@ -47,9 +47,9 @@ export const SelectSeat = () => {
                         {roomData.Seats.map(seat => <Seat key={seat.id} {...seat} seatSelection={seatSelection}/>)}
                     </div>
                 </div>
-                <button onClick={seatLocking}>Reservar</button>
+                <button onClick={seatLocking} className={"rounded-xl bg-[#4338ca] font-light py-2 px-4"}>Reservar</button>
             </div>
             :
-            <h1> </h1>
+            <h1>Hola Guapa</h1>
     );
 };

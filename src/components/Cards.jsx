@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const Cards = ({title, img, time, mainGenre}) => {
     return(
-        <Container style= {{display: "inline-flex"}} className={"w-25"}>
+        <div className={"w-25 flex inline-flex"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
                 <Card.Img variant="top" img src={img} />
                 <Card.Body>
@@ -34,7 +34,7 @@ const Cards = ({title, img, time, mainGenre}) => {
                     </ListGroupItem>
                 </Card.Body>
             </Card>
-        </Container>
+        </div>
     );
 }
 
