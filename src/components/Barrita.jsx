@@ -10,6 +10,7 @@ const Barrita = () => {
           <Link className={'px-[15px] text-white no-underline'} to={"/"}>CINEMA 🎟️</Link>
         </div>
         <div className={'flex justify-center mr-2 text-g'}>
+            <Link to={'/basura'}>Hola</Link>
           <div className={'flex flex-col justify-center'}>
             {logged && <Link className={'px-[15px] text-white no-underline'} to={'/profile'}>{user.name}</Link> }
             {!logged && <Link className={'px-[15px] text-white no-underline'} to={'/login'}>Iniciar sesion</Link> }

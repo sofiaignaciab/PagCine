@@ -1,8 +1,10 @@
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import {Row, Col, Form, Button } from "react-bootstrap";
 import {useState} from "react";
 import Barrita from "./Barrita"
+import {useNavigate} from "react-router-dom";
 
 const Register = () => {
+    const navigate = useNavigate();
     const [userData, setUserData] = useState({
         name: "",
         lastname: "",
@@ -35,6 +37,7 @@ const Register = () => {
                 }
             )
         });
+        navigate('/login', { replace: true });
     }
 
     return (

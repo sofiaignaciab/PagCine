@@ -11,9 +11,9 @@ const Login = () => {
     const navigate = useNavigate();
 
     //nuevo____________________________________________________
-    const onLogin = (id, name, lastName, email) => {
+    const onLogin = (id, name, lastName, email, reserved_seats) => {
 
-        login(id, name, lastName, email);
+        login(id, name, lastName, email, reserved_seats);
 
         navigate('/', { replace: true });
     }
@@ -45,7 +45,7 @@ const Login = () => {
             return;
         }
 
-        onLogin(response[0]._id, response[0].name, response[0].lastname, response[0].email)
+        onLogin(response[0]._id, response[0].name, response[0].lastname, response[0].email, response[0].reserved_seats)
     }
 
     return(

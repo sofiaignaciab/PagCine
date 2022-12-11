@@ -1,18 +1,23 @@
 import React from "react";
-import {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 import {AuthContext} from "../context/AuthContext";
+import History from "./History";
+import {AuthProvider} from "../context";
 
 //border-sky-400 border-indigo-500/100
 
-const Profile_Card = () => {
+const ProfileCard = () => {
 
-    const{user} = useContext(AuthContext)
+    const{user} = useContext(AuthContext);
+
+    //{movies && movies.map(movie => <Cards key={movie.title} {...movie}/>)}
+
 
     console.log(user)
 
     return(
         <div className={'flex justify-center place-items-center'}>
-            <div className="dartboard dartboard-horizontal rounded-xl phone-3 w-[736px] h-[414px] bg-neutral-100 shadow-2xl shadow-zinc-500">
+            <div className="dartboard dartboard-horizontal rounded-xl phone-3 w-[736px] bg-neutral-100 shadow-2xl shadow-zinc-500">
                 <div><h1> </h1></div>
                 <div className="text-center">
                     <img
@@ -20,13 +25,14 @@ const Profile_Card = () => {
                         className="rounded-full w-32 mb-4 mx-auto"
                         alt="Avatar"
                     />
-                    <h5 className="text-3xl font-light mb-2 text-black">{user.name}</h5>
+                    <h5 className="text-3xl font-light mb-2 text-black">{user.name + " " + user.lastName}</h5>
                     <p className="text-gray-500 font-light text-xl">{user.email}</p>
+                    <h3 className="text-cyan-900 font-light">Historial</h3>
+                    {user.reserved_seats.map((funcion) => <History key={funcion.title} {...funcion}/>)}
                 </div>
             </div>
         </div>
-
     );
 };
 
-export default Profile_Card;
+export default ProfileCard;

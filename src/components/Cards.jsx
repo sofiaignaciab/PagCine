@@ -1,20 +1,15 @@
 import React from "react";
-import {Row, Card, ListGroup, Button, ListGroupItem, Container} from "react-bootstrap";
+import {Row, Card, ListGroup, Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 const Cards = ({title, img, time, mainGenre}) => {
     return(
-        <div className={"w-25 flex inline-flex"}>
+        <div className={"flex inline-flex w-[20vw]"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
                 <Card.Img variant="top" img src={img} />
                 <Card.Body>
-                    <Card.Title style={{ fontSize: 30, textAlign: "center" }}>{title}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{mainGenre}</Card.Subtitle>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        </div>
-                        <small className="text-muted" style={{ fontSize: 17}}>{time}</small>
-                    </div>
+                    <div className={'m-[2px] text-black font-semibold text-3xl mb-2'}>{title}</div>
+                    <Card.Subtitle className="mb-2 text-muted">{mainGenre + " - " + time}</Card.Subtitle>
                     <ListGroup.Item>
                         <Row>
                             <Link to={`/seatReservation/${title}`}>
@@ -27,11 +22,11 @@ const Cards = ({title, img, time, mainGenre}) => {
                             <h1> </h1>
                         </Row>
                     </ListGroup.Item>
-                    <ListGroupItem>
+                    <ListGroup.Item>
                         <Row>
                             <Button variant="primary" size="lg" href="/" disabled>Ver mas</Button>
                         </Row>
-                    </ListGroupItem>
+                    </ListGroup.Item>
                 </Card.Body>
             </Card>
         </div>

@@ -1,9 +1,8 @@
 import Barrita from "./Barrita";
 import {useState} from "react";
-import {Seat} from "./Seat";
-import {Fnction} from "./Fnction";
 import {useParams} from "react-router-dom";
 import MovieScreen from "./MovieScreen";
+import {GetMovie} from "./GetMovie";
 
 export const SelectSeat = () => {
     const [roomData, setRoomData] = useState()
@@ -12,10 +11,10 @@ export const SelectSeat = () => {
     const [selectedSeats, setSelectedSeats] = useState([])
 
     if (!ready) {
-        const aux = Fnction(title.movie)
-        console.log(aux)
-        setRoomData(aux)
+        console.log()
         setReady(true)
+        GetMovie(title)
+        setRoomData('')
     }
 
     const seatSelection = (seatID) => {
@@ -37,14 +36,26 @@ export const SelectSeat = () => {
         console.log(roomData.Seats)
     }
 
+    const Select = (e) => {
+        console.log(e.target.value)
+    }
+
     return (
         ready ?
             <div>
                 <Barrita />
+                <div className={'text-black'}>
+                    <select className={'w-full'} onChange={Select}>
+                        <option selected disabled>Seleccione la funcion deseada</option>
+                        <option>{roomData.fxseats[0].date + " " + roomData.fxseats[0].time}</option>
+                        <option>{roomData.fxseats[1].date + " " + roomData.fxseats[1].time}</option>
+                    </select>
+                </div>
                 <MovieScreen/>
+
                 <div className={"flex flex-wrap w-50 m-auto"}>
                     <div className={"d-inline-block"}>
-                        {roomData.Seats.map(seat => <Seat key={seat.id} {...seat} seatSelection={seatSelection}/>)}
+                        {/*roomData.Seats.map(seat => <Seat key={seat.id} {...seat} seatSelection={seatSelection}/>)*/}
                     </div>
                 </div>
                 <button onClick={seatLocking} className={"rounded-xl bg-[#4338ca] font-light py-2 px-4"}>Reservar</button>

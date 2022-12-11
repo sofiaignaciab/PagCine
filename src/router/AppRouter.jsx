@@ -6,8 +6,9 @@ import Register from "../components/Register";
 import {SelectSeat} from "../components/SelectSeat";
 import {RoomProvider} from "../context/RoomProvider";
 import {AuthProvider} from "../context";
-import Profile_Card from "../components/Profile_Card"
+import ProfileCard from "../components/ProfileCard"
 import Profile from "../components/Profile"
+import {Basura} from "../components/Basura";
 
 const AppRouter = () => {
     return (
@@ -15,7 +16,8 @@ const AppRouter = () => {
             <AuthProvider>
                 <RoomProvider>
                     <Routes>
-                        <Route path={"/profile_card"} element={<Profile_Card/>}/>
+                        <Route path={'/basura'} element={<Basura/>}/>
+                        <Route path={"/profile_card"} element={<ProfileCard/>}/>
                         <Route path={"/profile"} element={<Profile/>}/>
                         <Route path={"/"} element={<Home/>} />
                         <Route path={"/login"} element={<Login/>} />
