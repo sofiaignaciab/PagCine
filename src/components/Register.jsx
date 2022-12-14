@@ -22,10 +22,10 @@ const Register = () => {
 
     const Registration = async(event) => {
         event.preventDefault();
-        await fetch('http://localhost:27017/api/users/', {
+        await fetch('http://localhost:27017/api/users/register', {
             method: "POST",
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
             },
             body: JSON.stringify(
                 {
@@ -36,7 +36,9 @@ const Register = () => {
                     reservedseats: []
                 }
             )
-        });
+        })
+            .then(response => response.json())
+
         navigate('/login', { replace: true });
     }
 

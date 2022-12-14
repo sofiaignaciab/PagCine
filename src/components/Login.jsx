@@ -4,9 +4,10 @@ import {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import Barrita from "./Barrita";
+import Cookies from "universal-cookie";
 
 const Login = () => {
-
+    const cookies = new Cookies();
     const {login} = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -37,15 +38,32 @@ const Login = () => {
         const password = userData.password
 
         const response = await new Promise(resolve => {
-            fetch(`http://localhost:27017/api/users/login/${email+ "&" + password}`)
-                .then(response => resolve(response.json()))
+            fetch('http://localhost:27017/api/users/login', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(
+                    {
+                        email: email,
+                        password: password,
+                    }
+                )
+            })
+                .then(response => response.json())
+                .then(result => resolve(result))
         })
-        if (response[0] === undefined) {
+
+        if (cookies.get('token') === undefined) {
+            cookies.set('token', response.token, {maxAge: 999999})
+        }
+
+        if (response.data[0] === undefined) {
             alert('Usuario y/o contraseña incorrectos');
             return;
         }
 
-        onLogin(response[0]._id, response[0].name, response[0].lastname, response[0].email, response[0].reserved_seats)
+        onLogin(response.data[0]._id, response.data[0].name, response.data[0].lastname, response.data[0].email, response.data[0].reserved_seats)
     }
 
     return(
