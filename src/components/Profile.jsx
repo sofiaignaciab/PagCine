@@ -22,6 +22,7 @@ const Profile = () => {
             })
 
     }, [])
+
     return(
         cookiesChecked &&
         <>

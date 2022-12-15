@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import {Row, Card, ListGroup, Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {AuthContext} from "../context/AuthContext";
 
 const Cards = ({title, img, time, mainGenre}) => {
+    const {logged} = useContext(AuthContext);
     return(
         <div className={"flex inline-flex w-[20vw]"}>
             <Card className="shadow-sm" style={{ color: "#000" }} border="secondary">
@@ -12,9 +14,16 @@ const Cards = ({title, img, time, mainGenre}) => {
                     <Card.Subtitle className="mb-2 text-muted">{mainGenre + " - " + time}</Card.Subtitle>
                     <ListGroup.Item>
                         <Row>
-                            <Link to={`/seatReservation/${title}`}>
-                                <Button variant="primary" size="lg">Comprar</Button>
-                            </Link>
+                            {logged &&
+                                <Link to={`/seatReservation/${title}`}>
+                                    <Button variant="primary" size="lg">Comprar</Button>
+                                </Link>
+                            }
+                            {!logged &&
+                                <Link to={`/login`}>
+                                    <Button variant="primary" size="lg">Comprar</Button>
+                                </Link>
+                            }
                         </Row>
                     </ListGroup.Item>
                     <ListGroup.Item>

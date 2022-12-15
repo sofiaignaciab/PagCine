@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Cards from "./Cards";
 
-//items-stretch
-
 const Movies = () => {
     const [movies, setMovies] = useState([])
     

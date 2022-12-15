@@ -2,17 +2,8 @@ import React from "react";
 import {useContext} from "react";
 import {AuthContext} from "../context/AuthContext";
 import History from "./History";
-
-//border-sky-400 border-indigo-500/100
-
 const ProfileCard = () => {
-
-    const{user} = useContext(AuthContext);
-
-    //{movies && movies.map(movie => <Cards key={movie.title} {...movie}/>)}
-
-
-    console.log(user)
+    const {user} = useContext(AuthContext);
 
     return(
         <div className={'flex justify-center'}>

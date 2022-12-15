@@ -1,5 +1,3 @@
-//este provee toda la informacion a la aplicacion
-//children:componentes hijos
 import {AuthContext} from "./AuthContext";
 import {useReducer} from "react";
 import {authReducer} from "./authReducer";
@@ -10,7 +8,6 @@ const initialState = {
 }
 
 export const AuthProvider = ({children}) => {
-
     const [authState, dispatch] = useReducer(authReducer, initialState);
 
     const login = (id, name, lastName, email, reserved_seats) => {

@@ -15,6 +15,26 @@ export const SelectSeat = () => {
     const [selectedSeats, setSelectedSeats] = useState([]);
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
+    const {logged, login} = useContext(AuthContext)
+    const [cookiesChecked, setCookiesChecked] = useState(false);
+    useEffect(() => {
+        if (!logged) {
+            fetch('http://localhost:27017/api/', {
+                method: "POST",
+                credentials: 'include',
+                headers: {
+                    'Content-type': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result)
+                    if (result.message !== "Token not found") login(result._id, result.name, result.lastname, result.email, result.reserved_seats);
+                    setCookiesChecked(true)
+                })
+        }
+        else setCookiesChecked(true)
+    }, [])
 
     useEffect(() => {
         fetch(`http://localhost:27017/api/events/${title.movie}`)
@@ -117,7 +137,7 @@ export const SelectSeat = () => {
     }
 
     return (
-        ready ?
+        ready && cookiesChecked ?
             <div className={'h-[100vh]'}>
                 <Barrita />
                 <div className={'py-3'}>

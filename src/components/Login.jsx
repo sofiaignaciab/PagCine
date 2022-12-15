@@ -11,14 +11,12 @@ const Login = () => {
     const {login} = useContext(AuthContext);
     const navigate = useNavigate();
 
-    //nuevo____________________________________________________
     const onLogin = (id, name, lastName, email, reserved_seats) => {
 
         login(id, name, lastName, email, reserved_seats);
 
         navigate('/', { replace: true });
     }
-    //__________________________________________________________
 
     const [userData, setUserData] = useState({
         email: "",

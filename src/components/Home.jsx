@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from "react";
-
 import Barrita from "./Barrita";
 import Movies from "./Movies";
 import {AuthContext} from "../context/AuthContext";
@@ -7,6 +6,7 @@ import {AuthContext} from "../context/AuthContext";
 const Home = () => {
     const {logged, login} = useContext(AuthContext)
     const [cookiesChecked, setCookiesChecked] = useState(false);
+
     useEffect(() => {
         if (!logged) {
             fetch('http://localhost:27017/api/', {
