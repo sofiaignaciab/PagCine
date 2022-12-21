@@ -7,7 +7,7 @@ const Profile = () => {
     const {login} = useContext(AuthContext)
     const [cookiesChecked, setCookiesChecked] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:27017/api/', {
+        fetch('http://35.168.134.176/api/', {
             method: "POST",
             credentials: 'include',
             headers: {

@@ -36,7 +36,7 @@ const Login = () => {
         const password = userData.password
 
         const response = await new Promise(resolve => {
-            fetch('http://localhost:27017/api/users/login', {
+            fetch('http://35.168.134.176/api/users/login', {
                 method: "POST",
                 headers: {
                     'Content-type': 'application/json',

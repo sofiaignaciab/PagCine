@@ -22,7 +22,7 @@ const Register = () => {
 
     const Registration = async(event) => {
         event.preventDefault();
-        await fetch('http://localhost:27017/api/users/register', {
+        await fetch('http://35.168.134.176/api/users/register', {
             method: "POST",
             headers: {
                 'Content-type': 'application/json',

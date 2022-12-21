@@ -5,7 +5,7 @@ const Movies = () => {
     const [movies, setMovies] = useState([])
     
     useEffect(() => {
-        fetch('http://localhost:27017/api/events')
+        fetch('http://35.168.134.176/api/events')
             .then(response => response.json())
             .then(result => setMovies(result))
     })
