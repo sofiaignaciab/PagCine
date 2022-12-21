@@ -105,7 +105,7 @@ export const SelectSeat = () => {
         const newfxseats = GetNewSeats(selectedFunction.seats)
         console.log(newfxseats)
 
-        fetch(`http://localhost:27017/api/events/update/${title.movie}`, {
+        fetch(`http://35.168.134.176/api/events/update/${title.movie}`, {
             method: "PUT",
             headers: {
                 'Content-type': 'application/json'
@@ -122,7 +122,7 @@ export const SelectSeat = () => {
             seats: selectedSeats,
         }
         user.reserved_seats.push(userSeats)
-        fetch(`http://localhost:27017/api/users/update/${user.ID}`, {
+        fetch(`http://35.168.134.176/api/users/update/${user.ID}`, {
             method: "PUT",
             headers: {
                 'Content-type': 'application/json'
