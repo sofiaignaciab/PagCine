@@ -19,7 +19,7 @@ export const SelectSeat = () => {
     const [cookiesChecked, setCookiesChecked] = useState(false);
     useEffect(() => {
         if (!logged) {
-            fetch('http://localhost:27017/api/', {
+            fetch('http://35.168.134.176/api/', {
                 method: "POST",
                 credentials: 'include',
                 headers: {
@@ -37,7 +37,7 @@ export const SelectSeat = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:27017/api/events/${title.movie}`)
+        fetch(`http://35.168.134.176/api/events/${title.movie}`)
             .then(response => response.json())
             .then((result) => {
                 setEventData(result[0])
